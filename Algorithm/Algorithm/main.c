@@ -13,10 +13,13 @@
 
 // 检查一个数,是否是素数
 void isSuShu(int a);
+// 输出a以内的所有素数
+void outputAllSuShu(int a);
 
 int main(int argc, const char * argv[]) {
     
     // isSuShu(15);
+    outputAllSuShu(100);
     
     return 0;
 }
@@ -44,4 +47,26 @@ void isSuShu(int a) {
     } else {
         printf("%d不是素数\n", a);
     }
+}
+
+void outputAllSuShu(int a) {
+    
+    int i, j;
+    int count = 0;
+    
+    for (i = 2; i <= a; i++) {
+        for (j = 2; j < sqrt(i); j++) {
+            if (i % j == 0) {
+                break;
+            }
+        }
+        if (j > sqrt(i)) {
+            printf("%d\t", i);
+            count++;
+            if (count % 5 == 0) {
+                printf("\n");
+            }
+        }
+    }
+    printf("%d以内有%d个素数\n", a, count);
 }

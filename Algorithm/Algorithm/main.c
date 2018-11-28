@@ -15,11 +15,49 @@
 void isSuShu(int a);
 // 输出a以内的所有素数
 void outputAllSuShu(int a);
+// 打擂台算法
+
+// 冒泡排序
+//void bubbling();
 
 int main(int argc, const char * argv[]) {
     
     // isSuShu(15);
-    outputAllSuShu(100);
+//    outputAllSuShu(100);
+    
+//    int num[4];
+//    num[0] = 1;
+//    num[1] = 2;
+//    printf("%d\n", num[0]);
+//
+//    printf("%d\n", num[3]);
+    
+//    int a,b,c;
+//    printf("输入 a, b, c\n");
+//    scanf("%d,%d,%d", &a, &b, &c);
+//    printf("a = %d b = %d c = %d\n", a, b, c);
+
+//    int a,b;
+//    printf("输入 a, b\n");
+//    scanf("%d,%d", &a, &b);
+//    printf("a = %d b = %d\n", a, b);
+    
+//    int a;
+//    printf("输入 a\n");
+//    scanf("%d", &a);
+//    printf("a = %d \n", a);
+    
+    int a;
+    printf("请输入一个数\n");
+    scanf("%d", &a);
+    printf("a = %d\n", a);
+    
+//    printf("d", num);
+//    scanf("%d", &num);
+    
+//    for (int i = 0; i < 4; i++) {
+//        printf("%d", num[i]);
+//    }
     
     return 0;
 }

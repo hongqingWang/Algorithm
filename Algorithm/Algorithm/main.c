@@ -15,7 +15,8 @@
 void isSuShu(int a);
 // 输出a以内的所有素数
 void outputAllSuShu(int a);
-// 打擂台算法
+// 换零钱算法(100元换成10元、20元、50元的零钱有多少种换法)
+void changeMoney(void);
 
 // 冒泡排序
 //void bubbling();
@@ -24,27 +25,7 @@ int main(int argc, const char * argv[]) {
     
 //    isSuShu(15);
 //    outputAllSuShu(100);
-    
-    int i, j, num, count = 0;
-    
-    printf("请输入一个整数\n");
-    scanf("%d", &num);
-    for (i = 2; i <= num; i++) {
-        for (j = 2; j < sqrt(i); j++) {
-            if (i % j == 0) {
-                break;
-            }
-        }
-        if (j > sqrt(i)) {
-            printf("%d\t", i);
-            count++;
-            if (count % 5 == 0) {
-                printf("\n");
-            }
-        }
-    }
-    printf("素数有%d个\n", count);
-    
+    changeMoney();
     
     return 0;
 }
@@ -94,4 +75,19 @@ void outputAllSuShu(int a) {
         }
     }
     printf("%d以内有%d个素数\n", a, count);
+}
+
+void changeMoney() {
+    
+    // i-10元,j-20元,k-50元
+    int i, j, k;
+    for (i = 0; i <= 10; i++) {
+        for (j = 0; j <= 5; j++) {
+            for (k = 0; k <= 2; k++) {
+                if (i * 10 + j * 20 + k * 50 == 100) {
+                    printf("%d\t%d\t%d\t\n", i, j, k);
+                }
+            }
+        }
+    }
 }

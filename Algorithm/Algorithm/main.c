@@ -22,42 +22,29 @@ void outputAllSuShu(int a);
 
 int main(int argc, const char * argv[]) {
     
-    // isSuShu(15);
+//    isSuShu(15);
 //    outputAllSuShu(100);
     
-//    int num[4];
-//    num[0] = 1;
-//    num[1] = 2;
-//    printf("%d\n", num[0]);
-//
-//    printf("%d\n", num[3]);
+    int i, j, num, count = 0;
     
-//    int a,b,c;
-//    printf("输入 a, b, c\n");
-//    scanf("%d,%d,%d", &a, &b, &c);
-//    printf("a = %d b = %d c = %d\n", a, b, c);
-
-//    int a,b;
-//    printf("输入 a, b\n");
-//    scanf("%d,%d", &a, &b);
-//    printf("a = %d b = %d\n", a, b);
+    printf("请输入一个整数\n");
+    scanf("%d", &num);
+    for (i = 2; i <= num; i++) {
+        for (j = 2; j < sqrt(i); j++) {
+            if (i % j == 0) {
+                break;
+            }
+        }
+        if (j > sqrt(i)) {
+            printf("%d\t", i);
+            count++;
+            if (count % 5 == 0) {
+                printf("\n");
+            }
+        }
+    }
+    printf("素数有%d个\n", count);
     
-//    int a;
-//    printf("输入 a\n");
-//    scanf("%d", &a);
-//    printf("a = %d \n", a);
-    
-    int a;
-    printf("请输入一个数\n");
-    scanf("%d", &a);
-    printf("a = %d\n", a);
-    
-//    printf("d", num);
-//    scanf("%d", &num);
-    
-//    for (int i = 0; i < 4; i++) {
-//        printf("%d", num[i]);
-//    }
     
     return 0;
 }

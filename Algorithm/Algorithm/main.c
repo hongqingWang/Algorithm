@@ -15,7 +15,7 @@
 void isSuShu(int a);
 // 输出a以内的所有素数
 void outputAllSuShu(int a);
-// 换零钱算法(100元换成10元、20元、50元的零钱有多少种换法)
+// 换零钱算法-穷举法(100元换成10元、20元、50元的零钱有多少种换法)
 void changeMoney(void);
 
 // 冒泡排序

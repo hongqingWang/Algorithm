@@ -7,9 +7,26 @@
 //
 
 #include <stdio.h>
+#define MAXSIZE 10
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    
+    int num[MAXSIZE];
+    int max;
+    
+    printf("请输入%d个数字\n", MAXSIZE);
+    
+    for (int i = 0; i < MAXSIZE; i++) {
+        scanf("%d", &num[i]);
+    }
+    max = num[0];
+    for (int j = 0; j < MAXSIZE; j++) {
+        if (max < num[j]) {
+            max = num[j];
+        }
+    }
+    
+    printf("最大的数是%d\n", max);
+    
     return 0;
 }

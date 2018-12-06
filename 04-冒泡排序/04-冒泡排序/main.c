@@ -10,7 +10,8 @@
 
 int main(int argc, const char * argv[]) {
 
-    int arr[5] = {15, 4, 23, 25, 19};
+    
+    int arr[] = {5, 34, 29, 12, 90};
     int total = 5;
     int temp;
     
@@ -27,6 +28,7 @@ int main(int argc, const char * argv[]) {
     for (int i = 0; i < total; i++) {
         printf("%d\t", arr[i]);
     }
+    
     printf("\n");
     
     return 0;

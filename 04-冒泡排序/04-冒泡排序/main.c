@@ -9,8 +9,8 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    
-    int arr[5] = {5, 4, 3, 2, 1};
+
+    int arr[5] = {15, 4, 23, 25, 19};
     int total = 5;
     int temp;
     
